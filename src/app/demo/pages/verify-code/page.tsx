@@ -3,15 +3,15 @@
 import { Center, Heading } from '@chakra-ui/react'
 import {
   Button,
-  //FormControl,
   Box,
   Flex,
   Input,
   Stack,
-  //useColorModeValue,
   HStack,
 } from '@chakra-ui/react'
-//import { PinInput, PinInputField } from '@chakra-ui/react'
+
+import {useColorModeValue} from '@/components/ui/color-mode'
+import {PinInput} from '@/components/ui/pin-input'
 
 export default function VerifyEmailForm() {
   return (
@@ -19,55 +19,51 @@ export default function VerifyEmailForm() {
       minH={'100vh'}
       align={'center'}
       justify={'center'}
-    //   bg={useColorModeValue('gray.50', 'gray.800')}
+      bg={useColorModeValue('gray.50', 'gray.800')}
       >
       <Stack
-        spacing={4}
+        gap={4}
         w={'full'}
         maxW={'sm'}
-        // bg={useColorModeValue('white', 'gray.700')}
+        bg={useColorModeValue('white', 'gray.700')}
         rounded={'xl'}
         boxShadow={'lg'}
         p={6}
         my={10}>
         <Center>
           <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl' }}>
-            Verify your Email
+            验证手机号码
           </Heading>
         </Center>
         <Center
           fontSize={{ base: 'sm', sm: 'md' }}
-        //   color={useColorModeValue('gray.800', 'gray.400')}
+          color={useColorModeValue('gray.800', 'gray.400')}
           >
-          We have sent code to your email
+          发送代码短信到手机
         </Center>
         <Center
           fontSize={{ base: 'sm', sm: 'md' }}
           fontWeight="bold"
-        //   color={useColorModeValue('gray.800', 'gray.400')}
+          color={useColorModeValue('gray.800', 'gray.400')}
           >
-          username@mail.com
+          15640888106
         </Center>
         <Box>
           <Center>
             <HStack>
-              {/* <PinInput> */}
-                {/* <PinInputField /> */}
-                {/* <PinInputField /> */}
-                {/* <PinInputField /> */}
-                {/* <PinInputField /> */}
-              {/* </PinInput> */}
+              <PinInput>
+              </PinInput>
             </HStack>
           </Center>
         </Box>
-        <Stack spacing={6}>
+        <Stack gap={6}>
           <Button
             bg={'blue.400'}
             color={'white'}
             _hover={{
               bg: 'blue.500',
             }}>
-            Verify
+            验证
           </Button>
         </Stack>
       </Stack>
